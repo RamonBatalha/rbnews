@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/main.css">
+    <script defer src="main.js"></script>
+    <title>RBNEWS| Seu Portal de notícias</title>
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <img src="medias/logorbnews.png" alt="Logo RBNEWS">
+            <div>
+                <ul>
+                    <li><a href="#">Notícias</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <li><a href="#">Educação</a></li>
+                    <li><a href="#">Política</a></li>
+                    <li><a href="#">Saúde</a></li>
+                </ul>
+            </div>
+
+
+
+
+        </nav>
+
+        <div>
+            <button id="hamburguer-btn" onclick="showMenu()"><img src="hamburguer_white_36dp.svg" alt=""
+                    class="icon"></button>
+        </div>
+
+    </header>
+
+    <nav class="menu-mobile open">
+        <ul>
+            <li><a href="#">Notícias</a></li>
+            <li><a href="#">Economia</a></li>
+            <li><a href="#">Educação</a></li>
+            <li><a href="#">Política</a></li>
+            <li><a href="#">Saúde</a></li>
+        </ul>
+    </nav>
+
+    <section id="search-section">
+        <form action="">
+            <input type="search" id="search" name="search" placeholder="Buscar no site" style="padding: 5px;">
+        </form>
+
+        <div>
+            <a href="#"><img src="medias/instagram.png" alt="Logo Instagram"></a>
+            <a href="#"><img src="medias/facebook.png" alt="Logo Facebook"></a>
+            <a href="#"><img src="medias/twitter.png" alt="Logo Twitter"></a>
+        </div>
+
+    </section>
+
+    <!-------------------------------------- Highlight ----------------------------------------------------->
+
+    <main>
+        <section id="highlight-section">
+            <div id="highlight-image">
+                <a href="#">
+                    <img src="medias/people-protest.jpg" alt="" id="protest-img">
+                    <h1>Título</h1><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum id totam possimus quo unde neque
+                        odio quibusdam placeat optio quis voluptas rerum quaerat provident cum modi, quasi sit
+                        perspiciatis. Enim!</p>
+                </a>
+            </div>
+
+            <div class="div-minicards-hl">
+                <a href="#">
+                    <img src="medias/laboratory.jpg" alt="" class="minicards-hl">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+            <div class="div-minicards-hl">
+                <a href="#">
+                    <img src="medias/children.jpg" alt="" class="minicards-hl">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </a>
+            </div>
+            <div id="international-img" class="div-minicards-hl">
+                <a href="#">
+                    <img src="medias/international.jpg" alt="" class="minicards-hl">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </a>
+            </div>
+            <div id="bundestag-img" class="div-minicards-hl">
+                <a href="#">
+                    <img src="medias/bundestag.jpg" alt="" class="minicards-hl">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                </a>
+            </div>
+
+        </section>
+
+        <!---------------------------------- destaques da semana -------------------------------------->
+
+        <div id="h3-ds">
+            <h3>Destaques da Semana</h3>
+            <hr>
+        </div>
+        
+        <section id="destaques-sm">
+
+
+            <div class="minicards-ds">
+                <a href="#">
+                    <img src="medias/destaques/ds_1.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+            <div class="minicards-ds">
+                <a href="#">
+                    <img src="medias/destaques/ds_2.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+            <div class="minicards-ds">
+                <a href="#">
+                    <img src="medias/destaques/ds_3.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+            <div class="minicards-ds">
+                <a href="#">
+                    <img src="medias/destaques/ds_4.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+            <div class="minicards-ds">
+                <a href="#">
+                    <img src="medias/destaques/ds_5.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+            <div class="minicards-ds">
+                <a href="#">
+                    <img src="medias/destaques/ds_6.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+
+        </section>
+
+        <!-------------------------------------------- Outras Notícias  ---------------------------------------------->
+
+        <div id="h3-ds">
+            <h3>Outras Notícias</h3>
+            <hr>
+        </div>
+
+        <Section id="outras-nt">
+            <div class="minicards-on">
+                <a href="#">
+                    <img src="medias/outrasnoticias/on_1.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+            <div class="minicards-on">
+                <a href="#">
+                    <img src="medias/outrasnoticias/on_2.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+            <div class="minicards-on">
+                <a href="#">
+                    <img src="medias/outrasnoticias/on_3.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+            <div class="minicards-on">
+                <a href="#">
+                    <img src="medias/outrasnoticias/on_4.jpg" alt="">
+                    <h2>Título</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                </a>
+            </div>
+
+            
+
+            <div id="card-rec">
+                <h4>Recomendações de leitura</h4>
+
+                <p class="text-card-rec"><a href="" >Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a> </p>
+
+                <hr>
+                <p><a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a> </p>
+
+                <hr>
+                <p><a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a> </p>
+
+                <hr>
+                <p><a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a> </p>
+
+                <hr>
+                <p><a href="">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</a> </p>
+
+                
+            </div>
+        
+        </Section>
+    </main>
+
+    <footer>
+        <img src="medias/logorbnews.png" alt="">
+        <span>@Copyright Ramon Batalha</span>
+    </footer>
+</body>
+
+
+
+</html>

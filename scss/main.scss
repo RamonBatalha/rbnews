@@ -1,0 +1,506 @@
+@import 'colors';
+@import 'fonts';
+@import 'dimensions';
+@import 'mediaquery';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $white-color;
+    font-family: $font-fm;
+    transition: all 0.4s;
+}
+
+// -------------------------------  Header ------------------------------------
+
+header {
+    background-color: $main-color;
+    border-bottom: solid 10px $black-color;
+    height: 80px;
+    display: flex;
+    align-items: center;
+
+    button {
+        display: none;
+        background-color: transparent;
+        border: 0px;
+        cursor: pointer;
+
+        @include Tablet {
+            display: block;
+            margin-right: 50px;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 5.857vw; //80px
+        font-size: map-get($ft-size , "g");
+
+
+        img {
+            height: 45px;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 15px;
+            margin-top: 30px;
+
+            a:hover {
+                border-bottom: solid 2px $black-color;
+                color: $black-color;
+            }
+
+            @include Tablet {
+                display: none;
+            }
+        }
+    }
+}
+
+.menu-mobile {
+    display: none;
+
+    a:hover {
+        border-bottom: solid $black-color 2px;
+        color: $black-color;
+    }
+
+    @include Tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        gap: 15px;
+        background-color: $main-color;
+        border-bottom: solid $black-color 5px;
+
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        list-style: none;
+
+        li {
+            font-size: 25px;
+        }
+    }
+
+}
+
+// tornar o menu-mobile invisível
+.open {
+    display: none;
+}
+
+// ------------------------------------ search section -----------------------------
+
+#search-section {
+    height: 60px;
+    width: 100%;
+    background-color: #F1EAEA;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #search {
+        width: 215px;
+        height: 30px;
+        border-radius: none;
+        border: 2px solid #BEA9A9;
+        color: #BEA9A9;
+        margin-left: $margin-side;
+
+        @include SmarthPhone {
+            width: 180px;
+        }
+    }
+
+    input {
+        background-image: url(../medias/lupa.png);
+        background-repeat: no-repeat;
+        background-position: 170px 0px;
+
+        @include SmarthPhone {
+            background-position: 130px 0px;
+        }
+    }
+
+    div {
+        margin-right: $margin-side; //80px
+    }
+
+    img {
+        height: 45px;
+
+        @include SmarthPhone {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+//------------------------------ highlight-section ---------------------------------
+
+main {
+    margin-left: $margin-side;
+    margin-top: $margin-top;
+
+    a {
+        color: black;
+    }
+
+    h1 {
+        font-size: 25px;
+        text-align: start;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    #highlight-section {
+
+        display: grid;
+        grid-template-columns: 36.603vw 21.962vw 21.962vw; //500px 300px 300px
+        grid-template-rows: 20.132vw 20.132vw; //275px 
+        gap: 3.660vw; //50px
+        grid-row-gap: 2.928vw; //40px
+        margin-right: $margin-side;
+
+        p {
+            text-align: justify;
+
+            @include Tablet {
+                font-size: 20px;
+                width: 500px;
+            }
+
+            @include SmarthPhone {
+                font-size: 18px;
+                width: 300px;
+
+            }
+        }
+
+        #highlight-image {
+            @include Tablet {
+                width: 500px;
+                height: 500px;
+
+            }
+
+            @include SmarthPhone {
+                width: 300px;
+                height: 400px;
+
+            }
+
+            #protest-img {
+
+                width: 36.603vw;
+                height: 21.962vw;
+
+                @include Tablet {
+                    width: map-get($img-tablet, "w");
+                    height: map-get($img-tablet, "h");
+
+                }
+
+                @include SmarthPhone {
+                    width: map-get($img-smart, "w");
+                    height: map-get($img-smart, "h");
+                }
+            }
+        }
+
+        .div-minicards-hl {
+            font-size: map-get($ft-size, m);
+        }
+
+        #international-img {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        #bundestag-img {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        #highlight-image {
+            font-family: $font-fm;
+            font-size: map-get($ft-size, "g");
+
+        }
+
+        .minicards-hl {
+            width: map-get($mc-size, "w");
+            height: map-get($mc-size, "h");
+
+            @include Tablet {
+                width: map-get($img-tablet, "w");
+                height: map-get($img-tablet, "h");
+                margin-top: 15px;
+            }
+
+            @include SmarthPhone {
+                width: map-get($img-smart, "w");
+                height: map-get($img-smart, "h");
+
+            }
+        }
+
+        @include Tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+
+//--------------------  destaques da semana ---------------------------------
+
+    #h3-ds {
+        height: 60px;
+        font-size: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: $main-color;
+        margin-top: 75px;
+
+        hr {
+            width: 95%;
+            height: 3px;
+            background-color: $main-color;
+            border: none;
+            margin-top: 12px;
+        }
+    }
+
+    #destaques-sm {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 5px;
+        margin-top: 15px;
+
+
+        @include Tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: $margin-side;
+        }
+
+        .minicards-ds {
+            // border: solid black 2px;
+            width: 25.622vw; // 350px
+            height: 25.622vw; // 350px
+            margin: 5px 0;
+
+            @include Tablet {
+                width: map-get($img-tablet, "w");
+                height: map-get($img-tablet, "h");
+                margin: 35px 0;
+            }
+
+            @include SmarthPhone {
+                width: map-get($img-smart, "w");
+                height: map-get($img-smart, "h");
+                margin: 45px 0;
+            }
+
+            img {
+                width: 25.622vw; // 350px
+                height: 18.302vw; // 250px
+
+                @include Tablet {
+                    width: map-get($img-tablet, "w");
+                    height: map-get($img-tablet, "h");
+                }
+
+                @include SmarthPhone {
+                    width: map-get($img-smart, "w");
+                    height: map-get($img-smart, "h");
+                }
+
+            }
+
+            p {
+                font-size: map-get($ft-size, m);
+                text-align: justify;
+
+                @include Tablet {
+                    font-size: 18px;
+                }
+            }
+        }
+
+    }
+
+//-------------------------- outras notícias section--------------------------------
+    #outras-nt {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        @include Tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: $margin-side;
+        }
+
+        .minicards-on {
+            // border: solid 2px black;
+            width: 25.622vw; // 350px
+            height: 25.622vw; // 350px
+            text-align: justify;
+
+            @include Tablet {
+                width: map-get($img-tablet, "w");
+                height: map-get($img-tablet, "h");
+                margin: 35px 0;
+            }
+
+            @include SmarthPhone {
+                width: map-get($img-smart, "w");
+                margin: 5px 0;
+            }
+
+            img {
+                width: 25.622vw; // 350px
+                height: 18.302vw; //250px;
+
+                @include Tablet {
+                    width: map-get($img-tablet, "w");
+                    height: map-get($img-tablet, "h");
+                }
+
+                @include SmarthPhone {
+                    width: map-get($img-smart, "w");
+                    height: map-get($img-smart, "h");
+                }
+
+            }
+
+            p {
+                font-size: map-get($ft-size, m);
+                text-align: justify;
+
+                @include Tablet {
+                    font-size: 18px;
+                }
+            }
+
+        }
+
+        #card-rec {
+            border: solid 1px #A29F9F;
+            width: 25.622vw; //350px;
+            height: 43.924vw; //600px;
+            border-radius: 0.366vw; //5px
+            grid-column: 3;
+            grid-row: 1/3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0px 0.366vw 1.098vw #888888; // 5px 15px
+
+            @include Tablet {
+                width: 350px;
+                height: 500px;
+                margin: 70px 0;
+            }
+
+            h4 {
+                font-size: map-get($ft-size , g);
+                margin: 1.464vw; //20px;
+
+                @include Tablet {
+                    font-size: 25px;
+                    margin: 18px;
+                }
+            }
+
+            a {
+                font-size: map-get($ft-size , p);
+                color: $main-color;
+
+                @include Tablet {
+                    font-size: 18px;
+                    width: 70%;
+                }
+            }
+
+            a:hover {
+                color: black;
+            }
+
+            p {
+                margin: 1.464vw; //25px;
+                text-align: justify;
+
+                @include Tablet {
+                    margin: 20px;
+                }
+
+            }
+
+            hr {
+                width: 90%;
+                margin: auto;
+
+            }
+        }
+    }
+}
+
+//--------------------------------------  Footer -------------------------------------------
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: $main-color;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 190px;
+        height: 40px;
+        margin-top: 1.098vw; //15px ;
+        margin-left: 5.857vw; //80px;
+    }
+
+    span {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-left: 5.857vw; //80px;
+        margin-top: 0.566vw; //5px;
+    }
+}
